@@ -10,6 +10,7 @@ import {
   Sparkle,
   User,
 } from "phosphor-react";
+import { Tweet } from "./components/Tweet";
 
 export function App() {
   return (
@@ -70,6 +71,10 @@ export function App() {
             <button type="submit">Tweet</button>
           </form>
           <div className="separator" />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
         </main>
       </div>
     </div>
