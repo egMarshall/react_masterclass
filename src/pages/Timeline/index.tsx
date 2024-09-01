@@ -3,12 +3,7 @@ import "./style.css";
 import { Header } from "../../components/Header";
 import { Separator } from "../../components/Separator";
 import { Tweet } from "../../components/Tweet";
-
-const tweets = [
-  "Elon Musk matou o twitter",
-  "teste teste teste",
-  "Meu primeiro tweet",
-];
+import { FormEvent, useState } from "react";
 
 // forEach / map
 // Ambos são métodos de iteração de arrays
@@ -16,13 +11,33 @@ const tweets = [
 // map: retorna um novo array
 
 export function Timeline() {
+  const [newTweet, setNewTweet] = useState("");
+  const [tweets, setTweets] = useState<string[]>([
+    "Elon Musk matou o twitter",
+    "teste teste teste",
+    "Meu primeiro tweet",
+  ]);
+
+  function createNewTweet(event: FormEvent) {
+    event.preventDefault();
+    setTweets([newTweet, ...tweets]);
+    setNewTweet("");
+  }
+
   return (
     <main className="timeline">
       <Header title="Home" />
-      <form className="new-tweet-form">
+      <form onSubmit={createNewTweet} className="new-tweet-form">
         <label htmlFor="tweet">
           <img src="https://github.com/egmarshall.png" alt="user photo" />
-          <textarea id="tweet" placeholder="What's happening?" />
+          <textarea
+            value={newTweet}
+            onChange={(event) => {
+              setNewTweet(event.target.value);
+            }}
+            id="tweet"
+            placeholder="What's happening?"
+          />
         </label>
         <button type="submit">Tweet</button>
       </form>
