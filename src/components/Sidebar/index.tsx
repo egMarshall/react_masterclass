@@ -11,7 +11,7 @@ import {
   User,
   DotsThreeCircle,
 } from "phosphor-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 //contexto no react: é uma forma de compartilhar informações entre componentes sem precisar passar props manualmente entre eles (prop drilling).
 
@@ -20,10 +20,10 @@ export function SideBar() {
     <aside className="sidebar">
       <img className="logo" src={twitterLogo} alt="logo" />
       <nav className="main-navigation">
-        <Link className="active" to="/">
+        <NavLink to="/">
           <House weight="fill" />
           Home
-        </Link>
+        </NavLink>
         <a href="">
           <Hash weight="fill" />
           Explore
