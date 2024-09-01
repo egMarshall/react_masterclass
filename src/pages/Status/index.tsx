@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { Separator } from "../../components/Separator";
 import { Tweet } from "../../components/Tweet";
 import { useState, FormEvent, KeyboardEvent } from "react";
+import { PaperPlaneRight } from "phosphor-react";
 
 export function Status() {
   const [newAnswer, setNewAnswer] = useState("");
@@ -43,7 +44,10 @@ export function Status() {
             placeholder="Tweet your answer"
           />
         </label>
-        <button type="submit">Answer</button>
+        <button type="submit">
+          <PaperPlaneRight />
+          <span>Answer</span>
+        </button>
       </form>
       {answers.map((answer) => {
         return <Tweet key={answer} content={answer} />;
