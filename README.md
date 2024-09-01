@@ -1,5 +1,19 @@
 # React MasterClass RocketSeat
 
+### Figma do Projeto:
+
+[Link para o Figma](<https://www.figma.com/design/3RbLiLtfKIr4RxyYkMZMly/Twitter-UI-(Community)?node-id=1-938&node-type=FRAME&t=KD9TFc9kuzqNCrHY-0>)
+
+### Como rodar o projeto localmente:
+
+```
+pnpm i
+```
+
+```
+pnpm run dev
+```
+
 ## Como funciona a renderização das páginas
 
 **Render**
@@ -29,7 +43,3 @@ O React utiliza do algorítmo de reconciliação para decidir o que deve ser ren
 ### Contexto no react:
 
 É uma forma de compartilhar informações entre componentes sem precisar passar props manualmente entre eles (prop drilling).
-
-## Figma do Projeto:
-
-[Link para o Figma](<https://www.figma.com/design/3RbLiLtfKIr4RxyYkMZMly/Twitter-UI-(Community)?node-id=1-938&node-type=FRAME&t=KD9TFc9kuzqNCrHY-0>)
