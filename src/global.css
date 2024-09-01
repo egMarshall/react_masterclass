@@ -18,7 +18,6 @@ input,
 textarea,
 button {
   font: 400 1rem "Roboto", sans-serif;
-
   /* REM -> 16px serve para, ao usuário aumentar ou diminuir a tela nas opções de acessibilidade, as fontes acompanham. Em px ficaria estático.*/
 }
 

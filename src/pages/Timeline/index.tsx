@@ -5,11 +5,6 @@ import { Separator } from "../../components/Separator";
 import { Tweet } from "../../components/Tweet";
 import { FormEvent, useState } from "react";
 
-// forEach / map
-// Ambos são métodos de iteração de arrays
-// forEach: não retorna nada
-// map: retorna um novo array
-
 export function Timeline() {
   const [newTweet, setNewTweet] = useState("");
   const [tweets, setTweets] = useState<string[]>([

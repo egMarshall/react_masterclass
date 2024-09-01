@@ -17,6 +17,7 @@ export function Status() {
     setAnswers([newAnswer, ...answers]);
     setNewAnswer("");
   }
+
   return (
     <main className="status">
       <Header title="Tweet" />

@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# React MasterClass RocketSeat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Como funciona a renderização das páginas
 
-Currently, two official plugins are available:
+**Render**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Renderização (Mostrar em tela): qualquer mudança no estado de um componente, gerará uma nova renderização dele.
 
-## Expanding the ESLint configuration
+**Algoritmo de reconciliação**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O React utiliza do algorítmo de reconciliação para decidir o que deve ser renderizado na tela. Enquanto as funções antes do return sao todas executadas a cada render, o HTML é renderizado apenas quando o estado do componente é alterado.
 
-- Configure the top-level `parserOptions` property like this:
+1. Cria em memória a nova versão do HTML do componente;
+2. Compara com a nova versão do HTML com a versão anterior (Diff);
+3. Aplica as operações javascript para alterar somente o necessário.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**Fluxo de renderização:**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Toda vez que alteramos o estado de um componente, TODO componente é recalculado;
+2. Toda vez que o seu componente PAI renderizar;
+3. Toda vez que alguma das suas propriedades mudarem.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Diferença do forEach para o map
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Ambos são métodos de iteração de arrays
+2. forEach: não retorna nada
+3. map: retorna um novo array
+
+### Contexto no react:
+
+É uma forma de compartilhar informações entre componentes sem precisar passar props manualmente entre eles (prop drilling).

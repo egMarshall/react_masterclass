@@ -13,8 +13,6 @@ import {
 } from "phosphor-react";
 import { NavLink } from "react-router-dom";
 
-//contexto no react: é uma forma de compartilhar informações entre componentes sem precisar passar props manualmente entre eles (prop drilling).
-
 export function SideBar() {
   return (
     <aside className="sidebar">
