@@ -2,7 +2,11 @@ import "./style.css";
 
 import { ArrowsClockwise, ChatCircle, Heart } from "phosphor-react";
 
-export function Tweet() {
+interface TweetProps {
+  content: string;
+}
+
+export function Tweet({ content }: TweetProps) {
   return (
     <a href="" className="tweet">
       <img src="https://github.com/egmarshall.png" />
@@ -11,7 +15,7 @@ export function Tweet() {
           <strong>Érico Marshall</strong>
           <span>@_egmarshall</span>
         </header>
-        <p>o Twitter ta morto, sdds dele.</p>
+        <p>{content}</p>
         <footer>
           <button type="button">
             <ChatCircle />

@@ -3,6 +3,17 @@ import { SideBar } from "./components/Sidebar";
 import { Header } from "./components/Header";
 import { Separator } from "./components/Separator";
 
+const tweets = [
+  "Elon Musk matou o twitter",
+  "teste teste teste",
+  "Meu primeiro tweet",
+];
+
+// forEach / map
+// Ambos são métodos de iteração de arrays
+// forEach: não retorna nada
+// map: retorna um novo array
+
 export function App() {
   return (
     <div className="layout">
@@ -18,10 +29,9 @@ export function App() {
             <button type="submit">Tweet</button>
           </form>
           <Separator />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
+          {tweets.map((tweet) => {
+            return <Tweet key={tweet} content={tweet} />;
+          })}
         </main>
       </div>
     </div>
