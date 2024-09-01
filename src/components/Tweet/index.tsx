@@ -1,5 +1,6 @@
+import "./style.css";
+
 import { ArrowsClockwise, ChatCircle, Heart } from "phosphor-react";
-import "./Tweet.css";
 
 export function Tweet() {
   return (

@@ -1,4 +1,6 @@
-import twitterLogo from "../assets/logo-twitter.svg";
+import "./style.css";
+
+import twitterLogo from "../../assets/logo-twitter.svg";
 import {
   House,
   Hash,

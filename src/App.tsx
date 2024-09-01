@@ -1,6 +1,6 @@
 import { Sparkle } from "phosphor-react";
 import { Tweet } from "./components/Tweet";
-import { SideBar } from "./components/side-bar";
+import { SideBar } from "./components/Sidebar";
 
 export function App() {
   return (
